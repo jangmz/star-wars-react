@@ -18,7 +18,7 @@ export default function MainContent() {
                     fetch(`https://swapi.dev/api/people/${characterID}`, { mode: "cors" })
                         .then(response => {
                             if (!response.ok) {
-                                throw new Error("Server error");
+                                throw new Error("Server error. Response is NOT OK.");
                             }
 
                             return response.json();
