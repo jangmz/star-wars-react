@@ -45,7 +45,7 @@ export default function MainContent() {
 
     return (
         <div>
-            {/* load all characters */}
+            {/* load all characters and create cards */}
             {
                 characters.map((character, index) => (
                     <CharacterCard key={index} character={character} />
