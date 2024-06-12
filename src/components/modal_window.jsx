@@ -1,4 +1,5 @@
 import "../styles/ModalWindow.css";
+import { shrinkAttributes } from "../shrink_attributes";
 
 export default function ModalWindow({ isOpen, onClose, character, onSave }) {
     if (!isOpen) {

@@ -1,3 +1,4 @@
+import { shrinkAttributes } from "../shrink_attributes";
 import CharacterCard from "./character_card";
 import { useEffect, useState } from "react";
 
@@ -22,7 +23,12 @@ export default function MainContent() {
 
                             return response.json();
                         })
-                        .then(data => charactersArray.push(data))
+                        .then(data => {
+                            // this calls a function to transform object to array
+                            // function eliminates the attributes that are not needed
+                            // then returns an array of attributes and transforms that array back into object
+                            charactersArray.push(Object.fromEntries(shrinkAttributes(data))); 
+                        })
                         .catch(error => setError(error))
                 );
             }

@@ -3,7 +3,7 @@ import { shrinkAttributes } from "../shrink_attributes";
 
 export default function CharacterAttributes({ character }) {
 
-    const slicedCharacter = shrinkAttributes(character);
+    const slicedCharacter = Object.entries(character);
 
     return (
         <div>
