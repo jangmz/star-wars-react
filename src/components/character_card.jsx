@@ -3,14 +3,27 @@ import CharacterAttributes from "./character_attributes"
 
 export default function CharacterCard({ character }) {
     const [characterObj, setCharacterObj] = useState(character);
+    const [isModalOpen, setModalOpen] = useState(false);
 
-    console.log(characterObj);
+    function openModal() {
+        setModalOpen(true);
+    }
+
+    function closeModal() {
+        setModalOpen(false);
+    }
 
     return (
         <div>
             <img src="#" alt=""/>
             <CharacterAttributes character={characterObj} />
-            <button>Edit</button>
+            <button onClick={openModal}>Edit</button>
+            <ModalWindow isOpen={isModalOpen} onClose={closeModal}>
+                <h2>Edit attributes</h2>
+                <p>Attributes</p>
+                <button>Save</button>
+                <button>Close</button>
+            </ModalWindow>
         </div>
     )
 }
