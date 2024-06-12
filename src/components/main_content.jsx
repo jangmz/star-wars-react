@@ -5,6 +5,8 @@ export default function MainContent() {
         <div>
             Main Content
             <CharacterCard />
+            <CharacterCard />
+            <CharacterCard />
         </div>
     )
 }
