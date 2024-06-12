@@ -1,31 +1,6 @@
 import CharacterCard from "./character_card";
 import { useEffect, useState } from "react";
 
-// custom hook for fetching character
-/*function useCharacter(peopleID = null) {
-    const [character, setCharacter] = useState({}); // for character attributes
-    const [error, setError] = useState(null); // for any errors
-    const [loading, setLoading] = useState(true); // loading state while fetching
-
-    useEffect(() => {
-        fetch(`https://swapi.dev/api/people/${peopleID}`, { mode: "cors"})
-            .then((response) => {
-                // if response is not ok, throw an error
-                if (!response.ok) {
-                    throw new Error ("Server error");
-                }
-
-                // otherwise return JSON data
-                return response.json
-            })
-            .then((response) => setCharacter(response))
-            .catch((error) => setError(error))
-            .finally(() => setLoading(false))
-    }, []);
-
-    return { character, error, loading };
-}
-*/
 export default function MainContent() {
     const [characters, setCharacters] = useState([]);
     const [error, setError] = useState(null);
