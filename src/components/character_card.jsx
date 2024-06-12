@@ -1,6 +1,6 @@
 import CharacterAttributes from "./character_attributes"
 
-export default function CharacterCard() {
+export default function CharacterCard({ character }) {
     return (
         <div>
             <img src="#" alt=""/>
