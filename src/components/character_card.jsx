@@ -2,18 +2,22 @@ import { useState } from "react"
 import CharacterAttributes from "./character_attributes"
 import ModalWindow from "./modal_window";
 
+// this is a card component for each of the characters
 export default function CharacterCard({ character }) {
     const [characterObj, setCharacterObj] = useState(character);
     const [isModalOpen, setModalOpen] = useState(false);
 
+    // opens modal window form
     function openModal() {
         setModalOpen(true);
     }
 
+    // closes modal window form
     function closeModal() {
         setModalOpen(false);
     }
 
+    // updates the new character attribute values
     function handleSave(updatedCharacter) {
         setCharacterObj(updatedCharacter);
     }

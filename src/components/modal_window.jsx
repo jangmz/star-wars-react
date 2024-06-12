@@ -10,10 +10,12 @@ export default function ModalWindow({ isOpen, onClose, character, onSave }) {
         return null;
     }
 
+    // handles any changes to the input element
     function handleInputChange(e, key) {
         setFormData({ ...formData, [key]: e.target.value });
     }
 
+    // saves the data to state and closes the window
     function handleSave() {
         onSave(formData);
         onClose();
@@ -22,11 +24,13 @@ export default function ModalWindow({ isOpen, onClose, character, onSave }) {
     return (
         <div className="modal-overlay">
             <div className="modal-content">
+                {/* close button */}
                 <button className="modal-close" onClick={onClose}>
                     &times;
                 </button>
                 <h2>Edit character attributes</h2>
                 <form>
+                    {/* displays the attributes as an input */}
                     {
                        attributes.map(([key, value]) => (
                         <label key={key}>

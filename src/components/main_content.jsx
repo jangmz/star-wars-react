@@ -7,13 +7,16 @@ export default function MainContent() {
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
     
+    // fetch the characters on mount
     useEffect(() => {
         const loadCharacters = async () => {
             const charactersArray = []; // will be later added to state
             const charactersPromises = []; // for detecting when all promises are finished
 
+            // randomly selects 3 characters from the star wars API and saves them
             for (let i = 0; i < 3; i++) {
                 const characterID = Math.floor(Math.random() * 83);
+
                 charactersPromises.push(
                     fetch(`https://swapi.dev/api/people/${characterID}`, { mode: "cors" })
                         .then(response => {
@@ -24,7 +27,7 @@ export default function MainContent() {
                             return response.json();
                         })
                         .then(data => {
-                            // this calls a function to transform object to array
+                            // this calls a function "shrinkAttributes" to transform object to array
                             // function eliminates the attributes that are not needed
                             // then returns an array of attributes and transforms that array back into object
                             charactersArray.push(Object.fromEntries(shrinkAttributes(data))); 
@@ -35,7 +38,7 @@ export default function MainContent() {
 
             await Promise.all(charactersPromises);
             setCharacters(charactersArray); // push all characters to state
-            setLoading(false);
+            setLoading(false); // stop with the "loading"
         }
 
         loadCharacters();
