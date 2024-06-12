@@ -1,5 +1,6 @@
 import { useState } from "react"
 import CharacterAttributes from "./character_attributes"
+import ModalWindow from "./modal_window";
 
 export default function CharacterCard({ character }) {
     const [characterObj, setCharacterObj] = useState(character);
@@ -13,17 +14,26 @@ export default function CharacterCard({ character }) {
         setModalOpen(false);
     }
 
+    function handleSave(updatedCharacter) {
+        setCharacterObj(updatedCharacter);
+    }
+
     return (
         <div>
+            {/* background image */}
             <img src="#" alt=""/>
+
+            {/* character attributes */}
             <CharacterAttributes character={characterObj} />
             <button onClick={openModal}>Edit</button>
-            <ModalWindow isOpen={isModalOpen} onClose={closeModal}>
-                <h2>Edit attributes</h2>
-                <p>Attributes</p>
-                <button>Save</button>
-                <button>Close</button>
-            </ModalWindow>
+
+            {/* form window to alter the attributes */}
+            <ModalWindow 
+                isOpen={isModalOpen} 
+                onClose={closeModal}
+                character={characterObj}
+                onSave={handleSave}
+            />
         </div>
     )
 }
