@@ -3,9 +3,11 @@ import CharacterAttributes from "./character_attributes"
 import ModalWindow from "./modal_window";
 
 // this is a card component for each of the characters
-export default function CharacterCard({ character }) {
+export default function CharacterCard({ position, character }) {
     const [characterObj, setCharacterObj] = useState(character);
     const [isModalOpen, setModalOpen] = useState(false);
+
+    console.log("Position: " + position);
 
     // opens modal window form
     function openModal() {
