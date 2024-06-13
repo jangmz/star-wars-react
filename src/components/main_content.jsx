@@ -2,7 +2,8 @@ import { shrinkAttributes } from "../shrink_attributes";
 import CharacterCard from "./character_card";
 import { useEffect, useState, createContext, useContext } from "react";
 
-const CharactersContext = createContext(null);
+// for global state manipulation
+export const CharactersContext = createContext(null);
 
 export default function MainContent() {
     const [characters, setCharacters] = useState([]);
@@ -55,12 +56,12 @@ export default function MainContent() {
     }
 
     return (
-        <CharactersContext.Provider value={ [characters, setCharacters] }>
+        <CharactersContext.Provider value={ {characters, setCharacters} }>
             <div>
                 {/* load all characters and create cards */}
                 {
                     characters.map((character, index) => (
-                        <CharacterCard key={index} position={index} character={character} />
+                        <CharacterCard key={index} position={index} /*character={character}*/ />
                     ))
                 }
             </div>

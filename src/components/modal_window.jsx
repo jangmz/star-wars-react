@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../styles/ModalWindow.css";
 
 export default function ModalWindow({ isOpen, onClose, character, onSave }) {
     const [formData, setFormData] = useState(character);
     const attributes = Object.entries(formData);
+
+    // update when character changes
+    useEffect(() => {
+        setFormData(character);
+    }, [character]);
 
     // if modal is not open
     if (!isOpen) {
