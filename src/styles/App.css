@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "Droid Sans";
+    src: url("../fonts/droid-sans.regular.ttf") format("truetype");
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: "Droid Sans";
+    background: radial-gradient(ellipse, rgb(129, 129, 1) 0%, black 60%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

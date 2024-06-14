@@ -1,0 +1,24 @@
+.navigation-menu > ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.navigation-menu > ul > li {
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23.43px;
+}
+
+.navigation-menu > ul > li > img {
+    width: 210px;
+    height: 127px;
+}
+
+.navigation-menu > ul > li:hover {
+    cursor: pointer;
+}
