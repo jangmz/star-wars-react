@@ -1,3 +1,5 @@
+import "../styles/NavigationMenu.css";
+
 export default function Menu() {
     return (
         <div className="navigation-menu">

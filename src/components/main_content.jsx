@@ -1,6 +1,7 @@
 import { shrinkAttributes } from "../shrink_attributes";
 import CharacterCard from "./character_card";
 import { useEffect, useState, createContext, useContext } from "react";
+import "../styles/MainContent.css";
 
 // for global state manipulation
 export const CharactersContext = createContext(null);
@@ -57,7 +58,7 @@ export default function MainContent() {
 
     return (
         <CharactersContext.Provider value={ {characters, setCharacters} }>
-            <div>
+            <div className="main-content">
                 {/* load all characters and create cards */}
                 {
                     characters.map((character, index) => (

@@ -11,6 +11,5 @@ html, body {
 body {
     font-family: "Droid Sans";
     background: radial-gradient(ellipse, rgb(129, 129, 1) 0%, black 60%);
-    background-repeat: no-repeat;
     background-size: cover;
 }

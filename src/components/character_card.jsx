@@ -35,9 +35,8 @@ export default function CharacterCard({ position/*, character*/ }) {
     }
 
     return (
-        <div>
-            {/* background image */}
-            <img src="#" alt=""/>
+        <div className="character-card">
+            {/* set background image */}
 
             {/* character attributes */}
             <CharacterAttributes character={characters[position]/*characterObj*/} />

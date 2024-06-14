@@ -7,7 +7,7 @@ export default function CharacterAttributes({ character }) {
     const slicedCharacter = Object.entries(character);
 
     return (
-        <div>
+        <div className="character-attributes">
             <ul>
                 {
                     // go through the characters attributes and display it
