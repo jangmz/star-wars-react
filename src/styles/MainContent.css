@@ -21,11 +21,31 @@
 }
 
 .character-card-sub {
+    font-size: 18px;
+    line-height: 21px;
     display: flex;
     flex-direction: column;
     justify-content: end;
     align-items: center;
     gap: 38px;
+}
+
+.character-card-sub > button {
+    border-radius: 7px;
+    border: 0;
+    padding: 8px 50px;
+    background-color: rgba(227, 214, 29, 1);
+    box-shadow: 0px 0px 30px rgba(227, 214, 29, 0.3);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: rgba(0, 0, 0, 1);
+}
+
+.character-card-sub > button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgba(227, 214, 29, 0.8);
 }
 
 .character-attributes > ul {
