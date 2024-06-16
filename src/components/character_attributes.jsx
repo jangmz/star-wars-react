@@ -1,5 +1,4 @@
 import Attribute from "./attribute"
-import { shrinkAttributes } from "../shrink_attributes";
 
 // displays a list of character attributes
 export default function CharacterAttributes({ character }) {

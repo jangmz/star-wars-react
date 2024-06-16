@@ -4,9 +4,8 @@ import ModalWindow from "./modal_window";
 import { CharactersContext } from "./main_content";
 
 // this is a card component for each of the characters
-export default function CharacterCard({ position/*, character*/ }) {
+export default function CharacterCard({ position }) {
     const {characters, setCharacters} = useContext(CharactersContext);
-    //const [characterObj, setCharacterObj] = useState(character);
     const [isModalOpen, setModalOpen] = useState(false);
 
     console.log("Position: " + position);
@@ -24,8 +23,6 @@ export default function CharacterCard({ position/*, character*/ }) {
 
     // updates the new character attribute values
     function handleSave(updatedCharacter) {
-        //setCharacterObj(updatedCharacter);
-
         // new array with updated character data
         const updatedCharacters = [...characters];
         updatedCharacters[position] = updatedCharacter;
@@ -40,7 +37,7 @@ export default function CharacterCard({ position/*, character*/ }) {
                 {/* set background image */}
 
                 {/* character attributes */}
-                <CharacterAttributes character={characters[position]/*characterObj*/} />
+                <CharacterAttributes character={characters[position]} />
                 <button onClick={openModal}>Edit</button>
             </div>
 
@@ -48,7 +45,7 @@ export default function CharacterCard({ position/*, character*/ }) {
             <ModalWindow 
                 isOpen={isModalOpen} 
                 onClose={closeModal}
-                character={characters[position]/*characterObj*/}
+                character={characters[position]}
                 onSave={handleSave}
             />
         </div>

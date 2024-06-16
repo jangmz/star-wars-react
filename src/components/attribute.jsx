@@ -1,4 +1,4 @@
-// component for displaying each characters attribute
+// component for displaying each characters attribute -> "Name: John Doe"
 export default function Attribute({ attrib, value}) {
     return (
         <li key={attrib}>
