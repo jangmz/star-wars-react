@@ -1,8 +1,11 @@
 .navigation-menu > ul{
     list-style: none;
     padding: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
 }
 
@@ -15,8 +18,8 @@
 }
 
 .navigation-menu > ul > li > img {
-    width: 210px;
-    height: 127px;
+    width: 150px;
+    height: auto;
 }
 
 .navigation-menu > ul > li:hover {
