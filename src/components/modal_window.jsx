@@ -45,8 +45,8 @@ export default function ModalWindow({ isOpen, onClose, character, onSave }) {
                        )) 
                     }
                     <div className="modal-buttons">
-                        <button onClick={handleSave}>Save</button>
-                        <button onClick={onClose}>Cancel</button>
+                        <button className="save" onClick={handleSave}>Save</button>
+                        <button className="cancel" onClick={onClose}>Cancel</button>
                     </div>
                 </form>
             </div>

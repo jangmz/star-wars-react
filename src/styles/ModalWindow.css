@@ -12,12 +12,13 @@
 }
 
 .modal-content {
-    background-color: white;
+    background-color: rgb(29, 29, 29);
     padding: 20px;
     border-radius: 8px;
     max-width: 500px;
     width: 100%;
     position: relative;
+    box-shadow: 0px 0px 30px rgba(227, 214, 29, 0.5);
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -25,12 +26,18 @@
 
 .modal-close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 15px;
+    right: 15px;
     background: none;
     border: none;
     font-size: 20px;
     cursor: pointer;
+    color: rgba(227, 214, 29, 1);
+    font-size: 32px;
+}
+
+.modal-content > h2 {
+    text-transform: uppercase;
 }
 
 .modal-content > form {
@@ -40,7 +47,52 @@
     gap: 20px;
 }
 
+.modal-content > form > label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-content > form > label > input {
+    font-family: "Droid Sans";
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
 .modal-buttons {
     display: flex;
     justify-content: space-around;
+}
+
+.modal-buttons > button {
+    border-radius: 7px;
+    border: 0;
+    padding: 4px 25px;
+    /*background-color: rgba(227, 214, 29, 1);*/
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba(0, 0, 0, 1);
+}
+
+.modal-buttons > button:hover {
+    cursor: pointer;
+}
+
+.save {
+    background-color: rgb(75, 227, 29, 0.8);
+}
+
+.cancel {
+    background-color: rgb(227, 29, 29, 0.8);
+}
+
+.save:hover {
+    background-color: rgba(75, 227, 29, 1);
+    box-shadow: 0px 0px 10px rgba(75, 227, 29, 1)
+}
+
+.cancel:hover {
+    background-color: rgba(227, 29, 29, 1);
+    box-shadow: 0px 0px 10px rgba(227, 29, 29, 1);
 }
