@@ -8,9 +8,6 @@ export default function CharacterCard({ position }) {
     const {characters, setCharacters} = useContext(CharactersContext);
     const [isModalOpen, setModalOpen] = useState(false);
 
-    console.log("Position: " + position);
-    console.log("Character name: " + characters[position].name);
-
     // opens modal window form
     function openModal() {
         setModalOpen(true);
