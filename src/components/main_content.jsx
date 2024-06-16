@@ -1,6 +1,6 @@
 import { shrinkAttributes } from "../shrink_attributes";
 import CharacterCard from "./character_card";
-import { useEffect, useState, createContext, useContext } from "react";
+import { useEffect, useState, createContext } from "react";
 import "../styles/MainContent.css";
 
 // for global state manipulation
