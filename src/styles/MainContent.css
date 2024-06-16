@@ -16,10 +16,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: end;
+    justify-content: space-around;
     gap:38px;
 }
 
-.character-attributes {
-    padding: 40px;
+.character-card-sub {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    gap: 38px;
+}
+
+.character-attributes > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }

@@ -36,11 +36,13 @@ export default function CharacterCard({ position/*, character*/ }) {
 
     return (
         <div className="character-card">
-            {/* set background image */}
+            <div className="character-card-sub">
+                {/* set background image */}
 
-            {/* character attributes */}
-            <CharacterAttributes character={characters[position]/*characterObj*/} />
-            <button onClick={openModal}>Edit</button>
+                {/* character attributes */}
+                <CharacterAttributes character={characters[position]/*characterObj*/} />
+                <button onClick={openModal}>Edit</button>
+            </div>
 
             {/* form window to alter the attributes */}
             <ModalWindow 
